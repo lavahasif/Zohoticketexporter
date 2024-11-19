@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Zoho ticket exports",
+  "version": "1.0",
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "description": "Fetch All ticket from zoho desk.",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "downloads",
+    "commands",
+    "webRequest",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.zoho.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "commands": {
+    "open-popup": {
+      "suggested_key": {
+        "default": "Alt+B"
+      },
+      "description": "Open the popup"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

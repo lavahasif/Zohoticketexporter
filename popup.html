@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookie JSON Exporter</title>
+  </head>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 10px;
+      padding: 10px;
+      background-color: #f4f4f4;
+      color: #333;
+      height: 150px;
+      width: 400px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #4caf50;
+    }
+
+    /* Progress Bar Container */
+    #progress-bar-container {
+      width: 80%;
+      max-width: 500px;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Progress Bar */
+    #progress-bar {
+      height: 100%;
+      width: 0;
+      background-color: #4caf50;
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    /* Progress Text */
+    #progress-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    /* Start Button */
+    #startProcess {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .startProcess {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #startProcess:hover {
+      background-color: #45a049;
+    }
+
+    #startProcess:active {
+      background-color: #388e3c;
+    }
+  </style>
+
+  <body>
+    <h2>
+      Ticket Fetch Progress
+      <p id="count"></p>
+    </h2>
+    <div id="progress-bar-container" style="">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="progress-text">0%</div>
+    <button id="startProcess" style="margin: 10px; float: right">
+      Fetch All Tickets
+    </button>
+    <br />
+    <div>
+      <h3>OrgID Extractor</h3>
+      <div>Stored Organization ID:</div>
+      <h3><div id="orgId"></div></h3>
+      <button id="reload2" class="startProcess">Reload Page</button>
+      <div>
+        <span
+          >if your organization id is missing just refresh the zoho desk ticket
+          page and open the chrome extension
+        </span>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
